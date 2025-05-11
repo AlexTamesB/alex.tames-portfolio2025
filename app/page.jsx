@@ -1,9 +1,32 @@
+import { link } from "fs";
 import Image from "next/image";
 
+const opcionesDeMenu = [
+  {
+    id: 1, texto: 'AcercaDe.', link: '/', isSelected: true
+  }, {
+    id: 2, texto: 'Tecnonogias.', link: '/issues', isSelected: true
+  }, {
+    id: 3, texto: 'Proyectos.', link: '/pulls', isSelected: true
+  }, {
+    id: 4, texto: 'contactos.', link: '/Pulls', isSelected: true
+  }
+];
+
 const menu = function () {
-return (
-  <div>Aqui va  el menu </div>
-);
+  return (
+    <nav>
+      <h1>Menu</h1>
+      {opcionesDeMenu.map((opcion) => (
+        <a
+          key={opcion.id}
+          href={opcion.link}
+        >
+          {opcion.texto}
+        </a>
+      ))}
+    </nav>
+  );
 };
 
 
@@ -12,12 +35,16 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         {menu()}
+
+        <h1 className="text-4xl sm:text-6xl font-bold tracking-[-.01em] text-center">
+          Create Next App
+        </h1>
         <Image
           className="dark:invert"
           src="/next.svg"
           alt="Next.js logo"
           width={180}
-          height={38} 
+          height={38}
           priority
         />
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
