@@ -3,24 +3,25 @@ import Image from "next/image";
 
 const opcionesDeMenu = [
   {
-    id: 1, texto: 'AcercaDe.', link: '/', isSelected: true
+    id: 1, texto: 'Acerca de', link: '#about', isSelected: true
   }, {
-    id: 2, texto: 'Tecnonogias.', link: '/issues', isSelected: true
+    id: 2, texto: 'Tecnologias', link: '/#technologies', isSelected: true
   }, {
-    id: 3, texto: 'Proyectos.', link: '/pulls', isSelected: true
+    id: 3, texto: 'Proyectos', link: '#proyectos', isSelected: true
   }, {
-    id: 4, texto: 'contactos.', link: '/Pulls', isSelected: true
+    id: 4, texto: 'contactos', link: '#contactos', isSelected: true
   }
 ];
 
 const menu = function () {
   return (
     <nav>
-      <h1>Menu</h1>
+      <h1 className="p-2 mr-2">Menu</h1>
       {opcionesDeMenu.map((opcion) => (
         <a
           key={opcion.id}
           href={opcion.link}
+          className="p-2 mr-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded"
         >
           {opcion.texto}
         </a>
