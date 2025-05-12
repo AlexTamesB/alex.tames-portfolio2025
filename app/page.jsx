@@ -41,17 +41,18 @@ const menu = function () {
 
       <p className="text-sm text-gar-700 dark:text-gray-200">
 
-        Nombre completo: Alex Tames
+        Nombre completo: Alex Tames <br />
 
-        Edad: 32 años
+        Edad: 32 años <br />
 
-        Ubicación: San Isidro del General, Costa Rica.
+
+        Ubicación: San Isidro del General, Costa Rica. <br />
       </p>
 
       <h1 className="p-2 mr-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded">
         Acerca de mi: </h1>
 
-      <p className="text-sm text-gar-700 dark:text-gray-200">
+      <p className="text-sm text-gar-700 dark:text-gray-200 max-w-md">
 
 Hola, soy Alex Tames, desarrollador web enfocado en crear soluciones digitales modernas y eficientes. Me especializo en el desarrollo frontend con tecnologías como JavaScript, React y HTML/CSS, y estoy en constante aprendizaje para mejorar tanto en el diseño de interfaces como en la lógica de programación.
 
@@ -71,7 +72,7 @@ export default function Home() {
         {menu()}
 
         <h1 className="text-1xl sm:text-1xl font-bold tracking-[-.01em] text-center">
-          Alexander Tames barahona
+          texto sin raxon
         </h1>
         <Image
           className="dark:invert"
