@@ -13,7 +13,7 @@ const opcionesDeMenu = [
   }, {
     id: 4, texto: 'contactos', link: '#contactos', isSelected: true
   }
-];
+]; 
 
 const menu = function () {
   const [elementoActivo, setElementoActivo] = useState(1);
