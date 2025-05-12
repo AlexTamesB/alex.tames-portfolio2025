@@ -32,7 +32,7 @@ const menu = function () {
         >
           {opcion.texto}
           {elementoActivo === opcion.id &&
-            (<span>*</span>)}
+            (<span></span>)}
         </a>
       ))}
     </nav>
@@ -46,8 +46,8 @@ export default function Home() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         {menu()}
 
-        <h1 className="text-4xl sm:text-6xl font-bold tracking-[-.01em] text-center">
-          Create Next App
+        <h1 className="text-1xl sm:text-1xl font-bold tracking-[-.01em] text-center">
+          Alexander Tames barahona
         </h1>
         <Image
           className="dark:invert"
