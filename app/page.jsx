@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from 'react';
 
+
 const opcionesDeMenu = [
   {
     id: 1, texto: 'Acerca de', link: '#about', isSelected: true
@@ -20,12 +21,12 @@ const menu = function () {
 
   return (
     <nav>
-      <h1 className="p-4 mr-2 text-center">Menu</h1>
+      <h1 className="p-4 mr-2 text-2xl font-semibold ">Menu</h1>
       {opcionesDeMenu.map((opcion) => (
         <a
           key={opcion.id}
           href={opcion.link}
-          className="p-2 mr-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded"
+          className="bg-blue-500 p-2 mr-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded"
           onClick={() => {
             setElementoActivo(opcion.id);
           }}
@@ -36,30 +37,36 @@ const menu = function () {
           {opcion.texto}
         </a>
       ))}
-      <h1 className="p-2 mr-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded">
-        Datos personales: </h1>
 
-      <p className="text-sm text-gar-700 dark:text-gray-200">
+      {elementoActivo === 1 &&
+        (<div>
+        <h1 className="mt-3 text-2xl font-semibold text-blue-700 dark:text-blue-300 mb-3 border-b border-gray-300 dark:border-gray-600 pb-2">
+  Datos personales:
+</h1>
 
-        Nombre completo: Alex Tames <br />
+          <p className="text-sm text-gar-700 dark:text-gray-200">
 
-        Edad: 32 años <br />
+            Nombre completo: Alex Tames <br />
+
+            Edad: 32 años <br />
 
 
-        Ubicación: San Isidro del General, Costa Rica. <br />
-      </p>
+            Ubicación: San Isidro del General, Costa Rica. <br />
+          </p>
 
-      <h1 className="p-2 mr-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded">
-        Acerca de mi: </h1>
+       <h1 className="mt-3 text-2xl font-semibold text-blue-700 dark:text-blue-300 mb-3 border-b border-gray-300 dark:border-gray-600 pb-2">
+  Acerca de mí:
+</h1>
+          <p className="text-sm text-gar-700 dark:text-gray-200 max-w-md">
 
-      <p className="text-sm text-gar-700 dark:text-gray-200 max-w-md">
+            Hola, soy Alex Tames,aprendiz de desarrollador web enfocado en crear soluciones digitales modernas y eficientes. Me especializo en el desarrollo frontend con tecnologías como JavaScript, React y HTML/CSS, y estoy en constante aprendizaje para mejorar tanto en el diseño de interfaces como en la lógica de programación.
 
-Hola, soy Alex Tames, desarrollador web enfocado en crear soluciones digitales modernas y eficientes. Me especializo en el desarrollo frontend con tecnologías como JavaScript, React y HTML/CSS, y estoy en constante aprendizaje para mejorar tanto en el diseño de interfaces como en la lógica de programación.
+            Desde que comencé e, descubrí una pasión por construir proyectos que no solo funcionen bien, sino que también ofrezcan una excelente experiencia al usuario. Me considero una persona autodidacta, curiosa y comprometida con el crecimiento continuo. Me gusta enfrentar retos técnicos y encontrar soluciones limpias, escalables y bien estructuradas.
 
-Desde que comencé en el mundo del desarrollo, descubrí una pasión por construir proyectos que no solo funcionen bien, sino que también ofrezcan una excelente experiencia al usuario. Me considero una persona autodidacta, curiosa y comprometida con el crecimiento continuo. Me gusta enfrentar retos técnicos y encontrar soluciones limpias, escalables y bien estructuradas.
-
-Actualmente busco oportunidades para seguir creciendo profesionalmente, colaborar en proyectos reales y aportar mis habilidades a equipos de desarrollo que valoren la calidad y la innovación.
-      </p>
+            Actualmente busco oportunidades para seguir creciendo profesionalmente, colaborar en proyectos reales y aportar mis habilidades a equipos de desarrollo que valoren la calidad y la innovación.
+          </p>
+        </div>)
+        }
     </nav>
   );
 };
@@ -68,6 +75,7 @@ Actualmente busco oportunidades para seguir creciendo profesionalmente, colabora
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         {menu()}
 
