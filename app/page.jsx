@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import {useState } from 'react';
+import { useState } from 'react';
 
 const opcionesDeMenu = [
   {
@@ -13,7 +13,7 @@ const opcionesDeMenu = [
   }, {
     id: 4, texto: 'contactos', link: '#contactos', isSelected: true
   }
-]; 
+];
 
 const menu = function () {
   const [elementoActivo, setElementoActivo] = useState(1);
@@ -26,15 +26,39 @@ const menu = function () {
           key={opcion.id}
           href={opcion.link}
           className="p-2 mr-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded"
-        onClick={() => {
-          setElementoActivo(opcion.id);
-        }}
+          onClick={() => {
+            setElementoActivo(opcion.id);
+          }}
         >
-          {opcion.texto}
+
           {elementoActivo === opcion.id &&
-            (<span></span>)}
+            (<span>*</span>)}
+          {opcion.texto}
         </a>
       ))}
+      <h1 className="p-2 mr-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded">
+        Datos personales: </h1>
+
+      <p className="text-sm text-gar-700 dark:text-gray-200">
+
+        Nombre completo: Alex Tames
+
+        Edad: 32 años
+
+        Ubicación: San Isidro del General, Costa Rica.
+      </p>
+
+      <h1 className="p-2 mr-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded">
+        Acerca de mi: </h1>
+
+      <p className="text-sm text-gar-700 dark:text-gray-200">
+
+Hola, soy Alex Tames, desarrollador web enfocado en crear soluciones digitales modernas y eficientes. Me especializo en el desarrollo frontend con tecnologías como JavaScript, React y HTML/CSS, y estoy en constante aprendizaje para mejorar tanto en el diseño de interfaces como en la lógica de programación.
+
+Desde que comencé en el mundo del desarrollo, descubrí una pasión por construir proyectos que no solo funcionen bien, sino que también ofrezcan una excelente experiencia al usuario. Me considero una persona autodidacta, curiosa y comprometida con el crecimiento continuo. Me gusta enfrentar retos técnicos y encontrar soluciones limpias, escalables y bien estructuradas.
+
+Actualmente busco oportunidades para seguir creciendo profesionalmente, colaborar en proyectos reales y aportar mis habilidades a equipos de desarrollo que valoren la calidad y la innovación.
+      </p>
     </nav>
   );
 };
