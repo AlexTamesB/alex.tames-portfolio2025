@@ -1,18 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from 'react';
+import { useState } from 'react'; 
 
 
 const opcionesDeMenu = [
   {
     id: 1, texto: 'Acerca de', link: '#about', isSelected: true
   }, {
-    id: 2, texto: 'Tecnologias', link: '/#technologies', isSelected: true
+    id: 2, texto: 'Tecnologias', link: 'Tecnologias', isSelected: true
   }, {
-    id: 3, texto: 'Proyectos', link: '#proyectos', isSelected: true
+    id: 3, texto: 'Proyectos', link: 'Proyectos', isSelected: true
   }, {
-    id: 4, texto: 'contactos', link: '#contactos', isSelected: true
+    id: 4, texto: 'contactos', link: 'Contactos', isSelected: true
   }
 ];
 
