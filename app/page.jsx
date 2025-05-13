@@ -12,7 +12,7 @@ const opcionesDeMenu = [
   }, {
     id: 3, texto: 'Proyectos', link: 'Proyectos', isSelected: true
   }, {
-    id: 4, texto: 'contactos', link: 'Contactos', isSelected: true
+    id: 4, texto: 'Contactos', link: 'Contactos', isSelected: true
   }
 ];
 
