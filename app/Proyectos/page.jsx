@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Menu from "../Components/Menu"
 
+
 export default function Proyectos() {
   return (
     <div className="max-w-lg mx-auto p-8">
